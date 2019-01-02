@@ -9,14 +9,12 @@ def hanoi_tower(n, source = 'A', destination = 'B', auxiliary = 'C')
   else
     # Step 1 − Move n-1 disks from source to aux
     hanoi_tower(n-1, source, auxiliary, destination)
-    #
-    # # Step 2 − Move nth disk from source to dest
+
+    # Step 2 − Move nth disk from source to dest
     puts "Move from #{source} to #{destination}"
-    # destination.push(source.pop)
-    #
-    # # Step 3 − Move n-1 disks from aux to dest
+
+    # Step 3 − Move n-1 disks from aux to dest
     hanoi_tower(n-1, auxiliary, destination, source)
-    # puts "Move from #{auxiliary} to #{destination}"
   end
 end
 
